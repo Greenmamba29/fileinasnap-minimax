@@ -1,0 +1,49 @@
+{
+  "title": "Something went wrong",
+  "subtitle": "We encountered an error while processing your request.",
+  "retry": "Try Again",
+  "goHome": "Go to Dashboard",
+  "reportIssue": "Report Issue",
+  "notFound": {
+    "title": "Page Not Found",
+    "subtitle": "The page you're looking for doesn't exist.",
+    "description": "It might have been moved, deleted, or you entered the wrong URL."
+  },
+  "unauthorized": {
+    "title": "Access Denied",
+    "subtitle": "You don't have permission to access this resource.",
+    "description": "Please sign in with an account that has the required permissions."
+  },
+  "serverError": {
+    "title": "Server Error",
+    "subtitle": "Something went wrong on our end.",
+    "description": "We're working to fix this issue. Please try again in a few minutes."
+  },
+  "networkError": {
+    "title": "Connection Error",
+    "subtitle": "Unable to connect to our servers.",
+    "description": "Please check your internet connection and try again."
+  },
+  "fileError": {
+    "uploadFailed": "Failed to upload file",
+    "downloadFailed": "Failed to download file",
+    "deleteFailed": "Failed to delete file",
+    "renameFailed": "Failed to rename file",
+    "moveFailed": "Failed to move file",
+    "copyFailed": "Failed to copy file",
+    "fileTooLarge": "File is too large",
+    "fileTypeNotSupported": "File type not supported",
+    "insufficientSpace": "Insufficient storage space",
+    "fileNotFound": "File not found",
+    "accessDenied": "Access denied to file"
+  },
+  "validation": {
+    "required": "This field is required",
+    "invalidEmail": "Please enter a valid email address",
+    "passwordTooShort": "Password must be at least {{min}} characters",
+    "passwordTooLong": "Password cannot exceed {{max}} characters",
+    "fileNameTooLong": "File name is too long",
+    "invalidFileName": "File name contains invalid characters",
+    "invalidFileSize": "File size must be between {{min}} and {{max}}"
+  }
+}

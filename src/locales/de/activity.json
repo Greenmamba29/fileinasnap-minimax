@@ -1,0 +1,36 @@
+{
+  "title": "Aktivitäts-Feed",
+  "description": "Verfolgen Sie alle Dateioperationen und Systemereignisse in Echtzeit.",
+  "filters": {
+    "all": "Alle Aktivitäten",
+    "uploads": "Uploads",
+    "insights": "KI-Erkenntnisse",
+    "metadata": "Metadaten-Updates",
+    "shares": "Freigaben"
+  },
+  "activities": {
+    "fileCreated": "hat {{fileName}} hochgeladen",
+    "fileUpdated": "hat {{fileName}} aktualisiert",
+    "metadataUpdated": "hat Metadaten für {{fileName}} geändert",
+    "aiInsightsUpdated": "KI hat Erkenntnisse für {{fileName}} generiert",
+    "fileMoved": "hat {{fileName}} verschoben",
+    "fileShared": "hat {{fileName}} geteilt",
+    "fileDownloaded": "hat {{fileName}} heruntergeladen",
+    "tagsUpdated": "hat Tags für {{fileName}} aktualisiert",
+    "defaultAction": "hat eine Aktion bei {{fileName}} ausgeführt"
+  },
+  "noActivities": "Keine Aktivitäten Gefunden",
+  "noActivitiesDescription": "Sie haben noch keine Aktionen ausgeführt. Beginnen Sie mit dem Hochladen einiger Dateien!",
+  "noFilteredActivities": "Keine {{filter}} gefunden.",
+  "details": {
+    "viewDetails": "Details anzeigen"
+  },
+  "time": {
+    "justNow": "Gerade eben",
+    "minutesAgo": "vor {{count}} Minuten",
+    "hoursAgo": "vor {{count}} Stunden",
+    "daysAgo": "vor {{count}} Tagen",
+    "weeksAgo": "vor {{count}} Wochen",
+    "monthsAgo": "vor {{count}} Monaten"
+  }
+}

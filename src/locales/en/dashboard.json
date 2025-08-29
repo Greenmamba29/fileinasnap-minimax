@@ -1,0 +1,28 @@
+{
+  "welcome": "Welcome to your FileInASnap dashboard. Here's an overview of your files and activity.",
+  "overview": "Dashboard",
+  "totalFiles": "Total Files",
+  "storageUsed": "Storage Used",
+  "recentFiles": "Recent Files",
+  "mediaFiles": "Media Files",
+  "documentFiles": "Document Files",
+  "fileDistribution": "File Distribution",
+  "other": "Other",
+  "quickActions": "Quick Actions",
+  "uploadFiles": "Upload Files",
+  "analyzeMedia": "Analyze Media",
+  "viewHistory": "View History",
+  "stats": {
+    "totalFilesDescription": "files in your collection",
+    "storageDescription": "of storage space used",
+    "recentDescription": "files added this week",
+    "mediaDescription": "images, videos, and audio files",
+    "documentsDescription": "text documents and PDFs"
+  },
+  "trends": {
+    "growing": "+{{percent}}%",
+    "stable": "stable",
+    "declining": "-{{percent}}%",
+    "thisWeek": "+{{count}} this week"
+  }
+}

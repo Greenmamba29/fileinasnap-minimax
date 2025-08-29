@@ -1,0 +1,51 @@
+{
+  "name": "agent_generated_fileinasnap_universal_ai",
+  "exhibit_name": "FileInASnap Universal AI Server",
+  "type": 3,
+  "command": "sh {mcp_dir}/run.sh",
+  "args": [],
+  "env": {},
+  "description": "Universal AI-powered MCP server for FileInASnap with intelligent document analysis, media processing, file organization, and content generation capabilities. Supports OpenRouter (free tier) and MiniMax AI providers with automatic fallback and provider switching.",
+  "description_for_agent": "Provides AI-powered file management tools including document analysis, image processing, duplicate detection, smart categorization, tag generation, and folder structure suggestions. Uses OpenRouter free models by default with MiniMax integration scaffolded for future activation.",
+  "user_params": {
+    "args": {},
+    "env": {
+      "OPENROUTER_API_KEY": {
+        "required": false,
+        "description": "OpenRouter API key for enhanced model access (optional - free tier available without key)"
+      },
+      "MINIMAX_API_KEY": {
+        "required": false,
+        "description": "MiniMax API key for video/image generation and advanced AI features (scaffolded for future activation)"
+      },
+      "MINIMAX_API_HOST": {
+        "required": false,
+        "description": "MiniMax API host (https://api.minimax.io for Global, https://api.minimaxi.com for Mainland)"
+      },
+      "FILEINASNAP_PRIMARY_PROVIDER": {
+        "required": false,
+        "description": "Primary AI provider to use (openrouter or minimax, default: openrouter)"
+      },
+      "FILEINASNAP_FALLBACK_PROVIDER": {
+        "required": false,
+        "description": "Fallback AI provider when primary fails (openrouter or minimax)"
+      },
+      "FILEINASNAP_MAX_FILE_SIZE_MB": {
+        "required": false,
+        "description": "Maximum file size to process in MB (default: 100)"
+      },
+      "FILEINASNAP_TEMP_DIR": {
+        "required": false,
+        "description": "Temporary directory for file processing (default: /tmp/fileinasnap)"
+      },
+      "FILEINASNAP_OUTPUT_DIR": {
+        "required": false,
+        "description": "Output directory for generated files (default: ./output)"
+      },
+      "FILEINASNAP_DEBUG": {
+        "required": false,
+        "description": "Enable debug logging (true/false, default: false)"
+      }
+    }
+  }
+}

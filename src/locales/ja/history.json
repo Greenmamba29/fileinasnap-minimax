@@ -1,0 +1,37 @@
+{
+  "title": "ファイル履歴",
+  "description": "すべてのファイルの変更、バージョン、編集を時間をかけて追跡します。",
+  "recentFiles": "最近のファイル",
+  "versionHistory": "バージョン履歴",
+  "selectFile": "ファイルを選択",
+  "selectFileDescription": "リストからファイルを選択してバージョン履歴を表示します。",
+  "noHistory": "履歴がありません",
+  "noHistoryDescription": "このファイルにはまだ記録された履歴がありません。",
+  "latest": "最新",
+  "version": "v{{number}}",
+  "changeTypes": {
+    "created": "{{name}} を作成しました",
+    "modified": "{{name}} を変更しました",
+    "renamed": "\"{{oldName}}\" を \"{{newName}}\" に名前変更しました",
+    "renamedSimple": "{{name}} の名前を変更しました",
+    "moved": "\"{{oldPath}}\" から \"{{newPath}}\" に移動しました",
+    "movedSimple": "{{name}} を移動しました",
+    "metadataChanged": "{{name}} のメタデータを更新しました",
+    "tagsChanged": "{{name}} のタグを更新しました",
+    "updated": "{{name}} を更新しました"
+  },
+  "details": {
+    "show": "詳細を表示",
+    "hide": "詳細を非表示",
+    "previousValues": "前の値:",
+    "newValues": "新しい値:"
+  },
+  "timeline": {
+    "today": "今日",
+    "yesterday": "昨日",
+    "thisWeek": "今週",
+    "lastWeek": "先週",
+    "thisMonth": "今月",
+    "older": "さらに古い"
+  }
+}

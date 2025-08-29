@@ -1,0 +1,36 @@
+{
+  "insights": "媒体洞察",
+  "description": "使用AI驱动的洞察和元数据提取分析您的媒体文件。",
+  "selectFile": "选择文件",
+  "selectFileDescription": "选择一个文件来查看详细洞察、元数据和活动历史。",
+  "fileInsights": "文件洞察",
+  "aiSummary": "AI摘要",
+  "aiTags": "AI标签",
+  "properties": "属性",
+  "size": "大小",
+  "type": "类型",
+  "created": "创建时间",
+  "category": "分类",
+  "customMetadata": "自定义元数据",
+  "systemMetadata": "系统元数据",
+  "noCustomMetadata": "没有可用的自定义元数据。",
+  "activityHistory": "活动历史",
+  "activityHistoryDescription": "此文件的活动历史将在这里显示。",
+  "tabs": {
+    "insights": "洞察",
+    "metadata": "元数据",
+    "activity": "活动"
+  },
+  "filters": {
+    "allMedia": "所有媒体",
+    "images": "图片",
+    "videos": "视频",
+    "audio": "音频"
+  },
+  "noMediaFiles": "未找到媒体文件",
+  "noMediaFilesDescription": "上传一些图片、视频或音频文件，在这里查看AI驱动的洞察。",
+  "preview": "预览",
+  "downloadFile": "下载",
+  "shareFile": "分享",
+  "moreFiles": "+{{count}} 更多"
+}

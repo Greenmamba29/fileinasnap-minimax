@@ -1,0 +1,23 @@
+{
+  "documents": "Documentos",
+  "documentsDescription": "Todos tus documentos en un solo lugar",
+  "documentsEmpty": "Tus documentos aparecerán aquí cuando los subas.",
+  "media": "Archivos multimedia",
+  "mediaDescription": "Imágenes, videos y archivos de audio con información de IA",
+  "mediaEmpty": "Tus archivos multimedia aparecerán aquí con información generada por IA.",
+  "projects": "Proyectos",
+  "projectsDescription": "Organiza los archivos relacionados con tus proyectos",
+  "projectsEmpty": "Los archivos de proyectos y documentos colaborativos aparecerán aquí.",
+  "archive": "Archivo",
+  "archiveDescription": "Archivos antiguos archivados automáticamente para su custodia",
+  "archiveEmpty": "Los archivos de más de 30 días se mueven automáticamente aquí.",
+  "general": "General",
+  "generalDescription": "Archivos y documentos varios",
+  "createFolder": "Crear carpeta",
+  "renameFolder": "Renombrar carpeta",
+  "deleteFolder": "Eliminar carpeta",
+  "folderProperties": "Propiedades de carpeta",
+  "folderSize": "Tamaño de carpeta",
+  "folderCount": "Número de archivos",
+  "lastModified": "Última modificación"
+}

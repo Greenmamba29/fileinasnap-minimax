@@ -1,0 +1,36 @@
+{
+  "title": "アクティビティフィード",
+  "description": "すべてのファイル操作とシステムイベントをリアルタイムで追跡します。",
+  "filters": {
+    "all": "すべてのアクティビティ",
+    "uploads": "アップロード",
+    "insights": "AIインサイト",
+    "metadata": "メタデータ更新",
+    "shares": "共有"
+  },
+  "activities": {
+    "fileCreated": "{{fileName}} をアップロードしました",
+    "fileUpdated": "{{fileName}} を更新しました",
+    "metadataUpdated": "{{fileName}} のメタデータを変更しました",
+    "aiInsightsUpdated": "AIが {{fileName}} のインサイトを生成しました",
+    "fileMoved": "{{fileName}} を移動しました",
+    "fileShared": "{{fileName}} を共有しました",
+    "fileDownloaded": "{{fileName}} をダウンロードしました",
+    "tagsUpdated": "{{fileName}} のタグを更新しました",
+    "defaultAction": "{{fileName}} に操作を実行しました"
+  },
+  "noActivities": "アクティビティが見つかりません",
+  "noActivitiesDescription": "まだ操作を実行していません。ファイルをアップロードして始めましょう！",
+  "noFilteredActivities": "{{filter}} が見つかりません。",
+  "details": {
+    "viewDetails": "詳細を表示"
+  },
+  "time": {
+    "justNow": "たった今",
+    "minutesAgo": "{{count}}分前",
+    "hoursAgo": "{{count}}時間前",
+    "daysAgo": "{{count}}日前",
+    "weeksAgo": "{{count}}週間前",
+    "monthsAgo": "{{count}}ヶ月前"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "insights": "Medien-Einblicke",
+  "description": "Analysieren Sie Ihre Mediendateien mit KI-gestützten Erkenntnissen und Metadatenextraktion.",
+  "selectFile": "Datei Auswählen",
+  "selectFileDescription": "Wählen Sie eine Datei aus, um detaillierte Einblicke, Metadaten und Aktivitätsverlauf anzuzeigen.",
+  "fileInsights": "Datei-Einblicke",
+  "aiSummary": "KI-Zusammenfassung",
+  "aiTags": "KI-Tags",
+  "properties": "Eigenschaften",
+  "size": "Größe",
+  "type": "Typ",
+  "created": "Erstellt",
+  "category": "Kategorie",
+  "customMetadata": "Benutzerdefinierte Metadaten",
+  "systemMetadata": "System-Metadaten",
+  "noCustomMetadata": "Keine benutzerdefinierten Metadaten verfügbar.",
+  "activityHistory": "Aktivitätsverlauf",
+  "activityHistoryDescription": "Der Aktivitätsverlauf für diese Datei wird hier angezeigt.",
+  "tabs": {
+    "insights": "Einblicke",
+    "metadata": "Metadaten",
+    "activity": "Aktivität"
+  },
+  "filters": {
+    "allMedia": "Alle Medien",
+    "images": "Bilder",
+    "videos": "Videos",
+    "audio": "Audio"
+  },
+  "noMediaFiles": "Keine Mediendateien Gefunden",
+  "noMediaFilesDescription": "Laden Sie Bilder, Videos oder Audiodateien hoch, um KI-gestützte Erkenntnisse hier zu sehen.",
+  "preview": "Vorschau",
+  "downloadFile": "Herunterladen",
+  "shareFile": "Teilen",
+  "moreFiles": "+{{count}} weitere"
+}

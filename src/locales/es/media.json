@@ -1,0 +1,36 @@
+{
+  "insights": "Análisis de Medios",
+  "description": "Analiza tus archivos multimedia con información impulsada por IA y extracción de metadatos.",
+  "selectFile": "Seleccionar un Archivo",
+  "selectFileDescription": "Elige un archivo para ver información detallada, metadatos e historial de actividad.",
+  "fileInsights": "Información del Archivo",
+  "aiSummary": "Resumen de IA",
+  "aiTags": "Etiquetas de IA",
+  "properties": "Propiedades",
+  "size": "Tamaño",
+  "type": "Tipo",
+  "created": "Creado",
+  "category": "Categoría",
+  "customMetadata": "Metadatos Personalizados",
+  "systemMetadata": "Metadatos del Sistema",
+  "noCustomMetadata": "No hay metadatos personalizados disponibles.",
+  "activityHistory": "Historial de Actividad",
+  "activityHistoryDescription": "El historial de actividad para este archivo se mostrará aquí.",
+  "tabs": {
+    "insights": "Información",
+    "metadata": "Metadatos",
+    "activity": "Actividad"
+  },
+  "filters": {
+    "allMedia": "Todos los Medios",
+    "images": "Imágenes",
+    "videos": "Videos",
+    "audio": "Audio"
+  },
+  "noMediaFiles": "No se Encontraron Archivos Multimedia",
+  "noMediaFilesDescription": "Sube algunas imágenes, videos o archivos de audio para ver información impulsada por IA aquí.",
+  "preview": "Vista Previa",
+  "downloadFile": "Descargar",
+  "shareFile": "Compartir",
+  "moreFiles": "+{{count}} más"
+}

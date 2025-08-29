@@ -1,0 +1,36 @@
+{
+  "title": "活动动态",
+  "description": "实时跟踪所有文件操作和系统事件。",
+  "filters": {
+    "all": "所有活动",
+    "uploads": "上传",
+    "insights": "AI洞察",
+    "metadata": "元数据更新",
+    "shares": "分享"
+  },
+  "activities": {
+    "fileCreated": "上传了 {{fileName}}",
+    "fileUpdated": "更新了 {{fileName}}",
+    "metadataUpdated": "修改了 {{fileName}} 的元数据",
+    "aiInsightsUpdated": "AI为 {{fileName}} 生成了洞察",
+    "fileMoved": "移动了 {{fileName}}",
+    "fileShared": "分享了 {{fileName}}",
+    "fileDownloaded": "下载了 {{fileName}}",
+    "tagsUpdated": "更新了 {{fileName}} 的标签",
+    "defaultAction": "对 {{fileName}} 执行了操作"
+  },
+  "noActivities": "未找到活动",
+  "noActivitiesDescription": "您还没有执行任何操作。开始上传一些文件吧！",
+  "noFilteredActivities": "未找到 {{filter}}。",
+  "details": {
+    "viewDetails": "查看详情"
+  },
+  "time": {
+    "justNow": "刚刚",
+    "minutesAgo": "{{count}} 分钟前",
+    "hoursAgo": "{{count}} 小时前",
+    "daysAgo": "{{count}} 天前",
+    "weeksAgo": "{{count}} 周前",
+    "monthsAgo": "{{count}} 个月前"
+  }
+}

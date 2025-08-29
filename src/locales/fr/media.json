@@ -1,0 +1,36 @@
+{
+  "insights": "Analyse des Médias",
+  "description": "Analysez vos fichiers multimédia avec des informations pilotées par l'IA et l'extraction de métadonnées.",
+  "selectFile": "Sélectionner un Fichier",
+  "selectFileDescription": "Choisissez un fichier pour voir des informations détaillées, des métadonnées et l'historique d'activité.",
+  "fileInsights": "Informations sur le Fichier",
+  "aiSummary": "Résumé IA",
+  "aiTags": "Étiquettes IA",
+  "properties": "Propriétés",
+  "size": "Taille",
+  "type": "Type",
+  "created": "Créé",
+  "category": "Catégorie",
+  "customMetadata": "Métadonnées Personnalisées",
+  "systemMetadata": "Métadonnées Système",
+  "noCustomMetadata": "Aucune métadonnée personnalisée disponible.",
+  "activityHistory": "Historique d'Activité",
+  "activityHistoryDescription": "L'historique d'activité de ce fichier sera affiché ici.",
+  "tabs": {
+    "insights": "Informations",
+    "metadata": "Métadonnées",
+    "activity": "Activité"
+  },
+  "filters": {
+    "allMedia": "Tous les Médias",
+    "images": "Images",
+    "videos": "Vidéos",
+    "audio": "Audio"
+  },
+  "noMediaFiles": "Aucun Fichier Média Trouvé",
+  "noMediaFilesDescription": "Téléchargez des images, vidéos ou fichiers audio pour voir des informations pilotées par l'IA ici.",
+  "preview": "Aperçu",
+  "downloadFile": "Télécharger",
+  "shareFile": "Partager",
+  "moreFiles": "+{{count}} de plus"
+}

@@ -1,0 +1,37 @@
+{
+  "title": "文件历史",
+  "description": "跟踪所有文件随时间的更改、版本和编辑。",
+  "recentFiles": "最近文件",
+  "versionHistory": "版本历史",
+  "selectFile": "选择文件",
+  "selectFileDescription": "从列表中选择一个文件以查看其版本历史。",
+  "noHistory": "没有可用历史",
+  "noHistoryDescription": "此文件尚未有记录的历史。",
+  "latest": "最新",
+  "version": "v{{number}}",
+  "changeTypes": {
+    "created": "创建了 {{name}}",
+    "modified": "修改了 {{name}}",
+    "renamed": "将 \"{{oldName}}\" 重命名为 \"{{newName}}\"",
+    "renamedSimple": "重命名了 {{name}}",
+    "moved": "从 \"{{oldPath}}\" 移动到 \"{{newPath}}\"",
+    "movedSimple": "移动了 {{name}}",
+    "metadataChanged": "更新了 {{name}} 的元数据",
+    "tagsChanged": "更新了 {{name}} 的标签",
+    "updated": "更新了 {{name}}"
+  },
+  "details": {
+    "show": "显示详情",
+    "hide": "隐藏详情",
+    "previousValues": "之前的值：",
+    "newValues": "新值："
+  },
+  "timeline": {
+    "today": "今天",
+    "yesterday": "昨天",
+    "thisWeek": "本周",
+    "lastWeek": "上周",
+    "thisMonth": "本月",
+    "older": "更早"
+  }
+}

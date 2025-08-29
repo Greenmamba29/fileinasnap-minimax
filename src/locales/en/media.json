@@ -1,0 +1,36 @@
+{
+  "insights": "Media Insights",
+  "description": "Analyze your media files with AI-powered insights and metadata extraction.",
+  "selectFile": "Select a File",
+  "selectFileDescription": "Choose a file to view detailed insights, metadata, and activity history.",
+  "fileInsights": "File Insights",
+  "aiSummary": "AI Summary",
+  "aiTags": "AI Tags",
+  "properties": "Properties",
+  "size": "Size",
+  "type": "Type",
+  "created": "Created",
+  "category": "Category",
+  "customMetadata": "Custom Metadata",
+  "systemMetadata": "System Metadata",
+  "noCustomMetadata": "No custom metadata available.",
+  "activityHistory": "Activity History",
+  "activityHistoryDescription": "Activity history for this file will be displayed here.",
+  "tabs": {
+    "insights": "Insights",
+    "metadata": "Metadata",
+    "activity": "Activity"
+  },
+  "filters": {
+    "allMedia": "All Media",
+    "images": "Images",
+    "videos": "Videos",
+    "audio": "Audio"
+  },
+  "noMediaFiles": "No Media Files Found",
+  "noMediaFilesDescription": "Upload some images, videos, or audio files to see AI-powered insights here.",
+  "preview": "Preview",
+  "downloadFile": "Download",
+  "shareFile": "Share",
+  "moreFiles": "+{{count}} more"
+}

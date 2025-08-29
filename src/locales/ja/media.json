@@ -1,0 +1,36 @@
+{
+  "insights": "メディアインサイト",
+  "description": "AIパワーでインサイトを取得し、メタデータを抽出してメディアファイルを分析します。",
+  "selectFile": "ファイルを選択",
+  "selectFileDescription": "詳細なインサイト、メタデータ、アクティビティ履歴を表示するためにファイルを選択してください。",
+  "fileInsights": "ファイルインサイト",
+  "aiSummary": "AI要約",
+  "aiTags": "AIタグ",
+  "properties": "プロパティ",
+  "size": "サイズ",
+  "type": "タイプ",
+  "created": "作成日",
+  "category": "カテゴリ",
+  "customMetadata": "カスタムメタデータ",
+  "systemMetadata": "システムメタデータ",
+  "noCustomMetadata": "カスタムメタデータは利用できません。",
+  "activityHistory": "アクティビティ履歴",
+  "activityHistoryDescription": "このファイルのアクティビティ履歴がここに表示されます。",
+  "tabs": {
+    "insights": "インサイト",
+    "metadata": "メタデータ",
+    "activity": "アクティビティ"
+  },
+  "filters": {
+    "allMedia": "すべてのメディア",
+    "images": "画像",
+    "videos": "ビデオ",
+    "audio": "オーディオ"
+  },
+  "noMediaFiles": "メディアファイルが見つかりません",
+  "noMediaFilesDescription": "イメージ、ビデオ、またはオーディオファイルをアップロードして、AIパワーのインサイトをここで確認してください。",
+  "preview": "プレビュー",
+  "downloadFile": "ダウンロード",
+  "shareFile": "共有",
+  "moreFiles": "+{{count}} 件のファイル"
+}

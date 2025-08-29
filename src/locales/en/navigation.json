@@ -1,0 +1,16 @@
+{
+  "dashboard": "Dashboard",
+  "mediaInsights": "Media Insights",
+  "fileHistory": "File History",
+  "activityFeed": "Activity Feed",
+  "smartFolders": "Smart Folders",
+  "navigation": "Navigation",
+  "quickActions": "Quick Actions",
+  "recentFiles": "Recent Files",
+  "allFiles": "All Files",
+  "favorites": "Favorites",
+  "trash": "Trash",
+  "shared": "Shared",
+  "synced": "Synced",
+  "offline": "Offline"
+}

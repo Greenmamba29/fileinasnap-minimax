@@ -1,0 +1,37 @@
+{
+  "title": "File History",
+  "description": "Track changes, versions, and edits for all your files over time.",
+  "recentFiles": "Recent Files",
+  "versionHistory": "Version History",
+  "selectFile": "Select a File",
+  "selectFileDescription": "Choose a file from the list to view its version history.",
+  "noHistory": "No History Available",
+  "noHistoryDescription": "This file doesn't have any recorded history yet.",
+  "latest": "Latest",
+  "version": "v{{number}}",
+  "changeTypes": {
+    "created": "Created {{name}}",
+    "modified": "Modified {{name}}",
+    "renamed": "Renamed \"{{oldName}}\" to \"{{newName}}\"",
+    "renamedSimple": "Renamed {{name}}",
+    "moved": "Moved from \"{{oldPath}}\" to \"{{newPath}}\"",
+    "movedSimple": "Moved {{name}}",
+    "metadataChanged": "Updated metadata for {{name}}",
+    "tagsChanged": "Updated tags for {{name}}",
+    "updated": "Updated {{name}}"
+  },
+  "details": {
+    "show": "Show details",
+    "hide": "Hide details",
+    "previousValues": "Previous Values:",
+    "newValues": "New Values:"
+  },
+  "timeline": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "thisWeek": "This Week",
+    "lastWeek": "Last Week",
+    "thisMonth": "This Month",
+    "older": "Older"
+  }
+}

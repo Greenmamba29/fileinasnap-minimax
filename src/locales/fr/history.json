@@ -1,0 +1,37 @@
+{
+  "title": "Historique des Fichiers",
+  "description": "Suivez les modifications, versions et éditions de tous vos fichiers au fil du temps.",
+  "recentFiles": "Fichiers Récents",
+  "versionHistory": "Historique des Versions",
+  "selectFile": "Sélectionner un Fichier",
+  "selectFileDescription": "Choisissez un fichier dans la liste pour voir son historique des versions.",
+  "noHistory": "Aucun Historique Disponible",
+  "noHistoryDescription": "Ce fichier n'a pas encore d'historique enregistré.",
+  "latest": "Dernier",
+  "version": "v{{number}}",
+  "changeTypes": {
+    "created": "A créé {{name}}",
+    "modified": "A modifié {{name}}",
+    "renamed": "A renommé \"{{oldName}}\" en \"{{newName}}\"",
+    "renamedSimple": "A renommé {{name}}",
+    "moved": "A déplacé de \"{{oldPath}}\" vers \"{{newPath}}\"",
+    "movedSimple": "A déplacé {{name}}",
+    "metadataChanged": "A mis à jour les métadonnées pour {{name}}",
+    "tagsChanged": "A mis à jour les étiquettes pour {{name}}",
+    "updated": "A mis à jour {{name}}"
+  },
+  "details": {
+    "show": "Afficher les détails",
+    "hide": "Masquer les détails",
+    "previousValues": "Valeurs Précédentes:",
+    "newValues": "Nouvelles Valeurs:"
+  },
+  "timeline": {
+    "today": "Aujourd'hui",
+    "yesterday": "Hier",
+    "thisWeek": "Cette Semaine",
+    "lastWeek": "Semaine Dernière",
+    "thisMonth": "Ce Mois",
+    "older": "Plus Ancien"
+  }
+}

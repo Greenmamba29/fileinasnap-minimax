@@ -1,0 +1,36 @@
+{
+  "title": "Flux d'Activité",
+  "description": "Suivez toutes les opérations de fichiers et événements système en temps réel.",
+  "filters": {
+    "all": "Toutes les Activités",
+    "uploads": "Téléchargements",
+    "insights": "Informations IA",
+    "metadata": "Mises à Jour des Métadonnées",
+    "shares": "Partages"
+  },
+  "activities": {
+    "fileCreated": "a téléchargé {{fileName}}",
+    "fileUpdated": "a mis à jour {{fileName}}",
+    "metadataUpdated": "a modifié les métadonnées de {{fileName}}",
+    "aiInsightsUpdated": "l'IA a généré des informations pour {{fileName}}",
+    "fileMoved": "a déplacé {{fileName}}",
+    "fileShared": "a partagé {{fileName}}",
+    "fileDownloaded": "a téléchargé {{fileName}}",
+    "tagsUpdated": "a mis à jour les étiquettes de {{fileName}}",
+    "defaultAction": "a effectué une action sur {{fileName}}"
+  },
+  "noActivities": "Aucune Activité Trouvée",
+  "noActivitiesDescription": "Vous n'avez pas encore effectué d'actions. Commencez par télécharger quelques fichiers!",
+  "noFilteredActivities": "Aucun {{filter}} trouvé.",
+  "details": {
+    "viewDetails": "Voir les détails"
+  },
+  "time": {
+    "justNow": "À l'instant",
+    "minutesAgo": "il y a {{count}} minutes",
+    "hoursAgo": "il y a {{count}} heures",
+    "daysAgo": "il y a {{count}} jours",
+    "weeksAgo": "il y a {{count}} semaines",
+    "monthsAgo": "il y a {{count}} mois"
+  }
+}

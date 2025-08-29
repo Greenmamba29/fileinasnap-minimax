@@ -1,0 +1,16 @@
+{
+  "dashboard": "Panel de control",
+  "mediaInsights": "Información de medios",
+  "fileHistory": "Historial de archivos",
+  "activityFeed": "Actividad reciente",
+  "smartFolders": "Carpetas inteligentes",
+  "navigation": "Navegación",
+  "quickActions": "Acciones rápidas",
+  "recentFiles": "Archivos recientes",
+  "allFiles": "Todos los archivos",
+  "favorites": "Favoritos",
+  "trash": "Papelera",
+  "shared": "Compartido",
+  "synced": "Sincronizado",
+  "offline": "Sin conexión"
+}

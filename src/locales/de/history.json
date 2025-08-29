@@ -1,0 +1,37 @@
+{
+  "title": "Dateiverlauf",
+  "description": "Verfolgen Sie Änderungen, Versionen und Bearbeitungen aller Ihrer Dateien über die Zeit.",
+  "recentFiles": "Neueste Dateien",
+  "versionHistory": "Versionsverlauf",
+  "selectFile": "Datei Auswählen",
+  "selectFileDescription": "Wählen Sie eine Datei aus der Liste aus, um ihren Versionsverlauf anzuzeigen.",
+  "noHistory": "Kein Verlauf Verfügbar",
+  "noHistoryDescription": "Diese Datei hat noch keinen aufgezeichneten Verlauf.",
+  "latest": "Neueste",
+  "version": "v{{number}}",
+  "changeTypes": {
+    "created": "Hat {{name}} erstellt",
+    "modified": "Hat {{name}} geändert",
+    "renamed": "Hat \"{{oldName}}\" in \"{{newName}}\" umbenannt",
+    "renamedSimple": "Hat {{name}} umbenannt",
+    "moved": "Hat von \"{{oldPath}}\" nach \"{{newPath}}\" verschoben",
+    "movedSimple": "Hat {{name}} verschoben",
+    "metadataChanged": "Hat Metadaten für {{name}} aktualisiert",
+    "tagsChanged": "Hat Tags für {{name}} aktualisiert",
+    "updated": "Hat {{name}} aktualisiert"
+  },
+  "details": {
+    "show": "Details anzeigen",
+    "hide": "Details ausblenden",
+    "previousValues": "Vorherige Werte:",
+    "newValues": "Neue Werte:"
+  },
+  "timeline": {
+    "today": "Heute",
+    "yesterday": "Gestern",
+    "thisWeek": "Diese Woche",
+    "lastWeek": "Letzte Woche",
+    "thisMonth": "Diesen Monat",
+    "older": "Älter"
+  }
+}

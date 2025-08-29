@@ -1,0 +1,23 @@
+{
+  "documents": "Documents",
+  "documentsDescription": "All your document files in one place",
+  "documentsEmpty": "Your document files will appear here when you upload them.",
+  "media": "Media Files",
+  "mediaDescription": "Images, videos, and audio files with AI insights",
+  "mediaEmpty": "Your media files will appear here with AI-powered insights.",
+  "projects": "Projects",
+  "projectsDescription": "Organize your project-related files",
+  "projectsEmpty": "Project files and collaborative documents will appear here.",
+  "archive": "Archive",
+  "archiveDescription": "Older files automatically archived for safekeeping",
+  "archiveEmpty": "Files older than 30 days are automatically moved here.",
+  "general": "General",
+  "generalDescription": "Miscellaneous files and documents",
+  "createFolder": "Create Folder",
+  "renameFolder": "Rename Folder",
+  "deleteFolder": "Delete Folder",
+  "folderProperties": "Folder Properties",
+  "folderSize": "Folder Size",
+  "folderCount": "File Count",
+  "lastModified": "Last Modified"
+}

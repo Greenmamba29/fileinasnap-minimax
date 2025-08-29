@@ -1,0 +1,36 @@
+{
+  "title": "Activity Feed",
+  "description": "Track all file operations and system events in real-time.",
+  "filters": {
+    "all": "All Activities",
+    "uploads": "Uploads",
+    "insights": "AI Insights",
+    "metadata": "Metadata Updates",
+    "shares": "Shares"
+  },
+  "activities": {
+    "fileCreated": "uploaded {{fileName}}",
+    "fileUpdated": "updated {{fileName}}",
+    "metadataUpdated": "modified metadata for {{fileName}}",
+    "aiInsightsUpdated": "AI insights generated for {{fileName}}",
+    "fileMoved": "moved {{fileName}}",
+    "fileShared": "shared {{fileName}}",
+    "fileDownloaded": "downloaded {{fileName}}",
+    "tagsUpdated": "updated tags for {{fileName}}",
+    "defaultAction": "performed an action on {{fileName}}"
+  },
+  "noActivities": "No Activities Found",
+  "noActivitiesDescription": "You haven't performed any actions yet. Start by uploading some files!",
+  "noFilteredActivities": "No {{filter}} found.",
+  "details": {
+    "viewDetails": "View details"
+  },
+  "time": {
+    "justNow": "Just now",
+    "minutesAgo": "{{count}} minutes ago",
+    "hoursAgo": "{{count}} hours ago",
+    "daysAgo": "{{count}} days ago",
+    "weeksAgo": "{{count}} weeks ago",
+    "monthsAgo": "{{count}} months ago"
+  }
+}
