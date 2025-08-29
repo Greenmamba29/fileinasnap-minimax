@@ -1,3 +1,155 @@
+# FileInASnap - AI-Powered File Management
+
+A modern React application built with TypeScript, Vite, and Tailwind CSS that provides intelligent file management capabilities with AI integration.
+
+## 🚀 Features
+
+- **AI-Powered File Analysis**: Analyze documents and images with advanced AI capabilities
+- **Smart Organization**: Get AI-powered suggestions for organizing files efficiently  
+- **Duplicate Detection**: Find and manage duplicate files with AI similarity detection
+- **Smart Tagging**: Generate intelligent tags for files using AI analysis
+- **Multi-language Support**: Built-in internationalization (i18n) support
+- **Dark/Light Theme**: Theme switching with system preference detection
+- **Responsive Design**: Mobile-first responsive design using Tailwind CSS
+- **File Management Interface**: Grid/list toggle views with advanced filtering
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React 18 + TypeScript
+- **Build Tool**: Vite 6
+- **Styling**: Tailwind CSS + Tailwind UI components
+- **State Management**: React Context API
+- **Database**: Supabase (PostgreSQL)
+- **Authentication**: Supabase Auth
+- **UI Components**: Radix UI primitives
+- **Icons**: Lucide React
+- **Internationalization**: react-i18next
+
+## 📦 Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <your-repo-url>
+   cd fileinasnap_minimax-main
+   ```
+
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+
+3. Set up environment variables:
+   ```bash
+   cp .env.example .env.local
+   ```
+   Fill in your Supabase credentials and other environment variables.
+
+4. Start the development server:
+   ```bash
+   pnpm dev
+   ```
+
+## 🏗️ Build & Deploy
+
+### Development
+```bash
+pnpm dev          # Start development server
+pnpm build        # Build for production
+pnpm preview      # Preview production build
+pnpm lint         # Run ESLint
+```
+
+### Production Build
+```bash
+pnpm build:prod   # Build for production with optimizations
+```
+
+### Vercel Deployment
+
+This project is optimized for Vercel deployment:
+
+1. Connect your GitHub repository to Vercel
+2. Set environment variables in Vercel dashboard
+3. Deploy automatically on push to main branch
+
+The `vercel.json` configuration is already included for optimal deployment.
+
+## 🧪 Quality Assurance
+
+All code has been tested and passes:
+- ✅ TypeScript compilation with zero errors
+- ✅ ESLint checks with only acceptable warnings  
+- ✅ Production build successful
+- ✅ All React hooks properly configured
+- ✅ Fast refresh optimized
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Create a `.env.local` file with:
+
+```env
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+VITE_AI_SERVICE_URL=your_ai_service_url
+```
+
+### Supabase Setup
+
+1. Create a new Supabase project
+2. Run the SQL migrations in `/supabase` folder
+3. Set up authentication providers
+4. Configure storage buckets for file uploads
+
+## 🌐 Internationalization
+
+The app supports multiple languages:
+- English (en)
+- Spanish (es) 
+- French (fr)
+- German (de)
+- Japanese (ja)
+- Chinese (zh)
+
+Add new translations in `/src/locales/[lang]/` directories.
+
+## 🎨 UI Guidelines
+
+Following the user's preferences for:
+- File management interface with grid/list toggle
+- Tailwind conditional styling for dark mode
+- Collapsible sticky filter panels  
+- Smooth transitions and hover effects
+- Notification and quick upload buttons with glow effects
+
+## 📱 Mobile Optimization
+
+- Mobile-first responsive design
+- Touch-friendly interface
+- Optimized for various screen sizes
+- Progressive Web App (PWA) ready
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🚀 Live Demo
+
+Once deployed to Vercel, the app will be available at your Vercel domain.
+
+---
+
+Built with ❤️ using React, TypeScript, and modern web technologies.
+
 # FileInASnap MiniMax - AI-Powered File Management
 
 [![Deploy Status](https://img.shields.io/badge/Deploy-Active-success)](https://823repj5ezsa.space.minimax.io)
