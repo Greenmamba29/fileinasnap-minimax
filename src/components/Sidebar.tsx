@@ -103,6 +103,7 @@ export function Sidebar({ isOpen, activeSection, onSectionChange }: SidebarProps
 
   const navigationSections = [
     { id: 'dashboard', label: 'Dashboard', icon: BarChart3, color: colors.primary.blue },
+    { id: 'files', label: 'Files', icon: FolderOpen, color: colors.primary.teal },
     { id: 'insights', label: 'Media Insights', icon: Lightbulb, color: colors.primary.teal },
     { id: 'history', label: 'File History', icon: History, color: colors.primary.darkBlue },
     { id: 'activity', label: 'Activity Feed', icon: Activity, color: colors.status.success }

@@ -1,14 +1,26 @@
 import { useState, useEffect } from 'react';
-import { supabase, DashboardStats } from '../lib/supabase';
+import { getCurrentUser } from '../lib/neon-auth';
 import { colors } from '../lib/design-system';
+import { FileUpload } from './FileUpload';
 import { 
   Files,
   HardDrive,
   Clock,
   Image,
   FileText,
-  TrendingUp
+  TrendingUp,
+  Upload,
+  Sparkles,
+  History
 } from 'lucide-react';
+
+interface DashboardStats {
+  total_files: number;
+  total_size: number;
+  recent_files: number;
+  media_files: number;
+  document_files: number;
+}
 
 interface StatCardProps {
   title: string;
@@ -48,6 +60,9 @@ function StatCard({ title, value, icon, color, trend }: StatCardProps) {
 export function DashboardOverview() {
   const [stats, setStats] = useState<DashboardStats | null>(null);
   const [loading, setLoading] = useState(true);
+  const [showUpload, setShowUpload] = useState(false);
+  const [recentFiles, setRecentFiles] = useState<any[]>([]);
+  const user = getCurrentUser();
 
   useEffect(() => {
     fetchDashboardStats();
@@ -55,23 +70,45 @@ export function DashboardOverview() {
 
   async function fetchDashboardStats() {
     try {
-      const { data, error } = await supabase.rpc('get_dashboard_stats');
+      console.log('🔍 Fetching dashboard stats for user:', user?.email);
       
-      if (error) {
-        console.error('Error fetching dashboard stats:', error);
-        // Use mock data for demonstration
-        setStats({
-          total_files: 156,
-          total_size: 2547328000, // ~2.4GB
-          recent_files: 12,
-          media_files: 48,
-          document_files: 89
-        });
-      } else {
-        setStats(data[0]);
+      // For demo, get stats from localStorage or use mock data
+      const storedFiles = localStorage.getItem('uploaded_files');
+      let uploadedFiles = [];
+      
+      if (storedFiles) {
+        try {
+          uploadedFiles = JSON.parse(storedFiles);
+        } catch (error) {
+          console.warn('Error parsing stored files:', error);
+        }
       }
+      
+      // Calculate stats from uploaded files or use mock data
+      const totalFiles = uploadedFiles.length || 156;
+      const mediaFiles = uploadedFiles.filter((f: any) => 
+        f.file?.type?.startsWith('image/') || f.file?.type?.startsWith('video/')
+      ).length || 48;
+      const documentFiles = uploadedFiles.filter((f: any) => 
+        f.file?.type?.includes('pdf') || f.file?.type?.includes('document')
+      ).length || 89;
+      
+      const totalSize = uploadedFiles.reduce((acc: number, f: any) => 
+        acc + (f.file?.size || 0), 0
+      ) || 2547328000;
+      
+      setStats({
+        total_files: totalFiles,
+        total_size: totalSize,
+        recent_files: Math.min(uploadedFiles.length, 12),
+        media_files: mediaFiles,
+        document_files: documentFiles
+      });
+      
+      setRecentFiles(uploadedFiles.slice(-5)); // Show last 5 files
+      
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Error fetching dashboard stats:', error);
       // Use mock data
       setStats({
         total_files: 156,
@@ -253,30 +290,33 @@ export function DashboardOverview() {
           
           <div className="space-y-3">
             <button 
-              className="w-full flex items-center space-x-3 p-3 rounded-lg transition-colors"
+              onClick={() => setShowUpload(true)}
+              className="w-full flex items-center space-x-3 p-3 rounded-lg transition-colors hover:bg-opacity-20"
               style={{ backgroundColor: `${colors.primary.blue}15` }}
             >
-              <Files size={18} color={colors.primary.blue} />
+              <Upload size={18} color={colors.primary.blue} />
               <span className="text-sm font-medium" style={{ color: colors.primary.blue }}>
                 Upload Files
               </span>
             </button>
             
             <button 
-              className="w-full flex items-center space-x-3 p-3 rounded-lg transition-colors"
+              onClick={() => alert('Media analysis feature - coming soon!')}
+              className="w-full flex items-center space-x-3 p-3 rounded-lg transition-colors hover:bg-opacity-20"
               style={{ backgroundColor: `${colors.primary.teal}15` }}
             >
-              <Image size={18} color={colors.primary.teal} />
+              <Sparkles size={18} color={colors.primary.teal} />
               <span className="text-sm font-medium" style={{ color: colors.primary.teal }}>
                 Analyze Media
               </span>
             </button>
             
             <button 
-              className="w-full flex items-center space-x-3 p-3 rounded-lg transition-colors"
+              onClick={() => alert('File history feature - coming soon!')}
+              className="w-full flex items-center space-x-3 p-3 rounded-lg transition-colors hover:bg-opacity-20"
               style={{ backgroundColor: `${colors.primary.darkBlue}15` }}
             >
-              <Clock size={18} color={colors.primary.darkBlue} />
+              <History size={18} color={colors.primary.darkBlue} />
               <span className="text-sm font-medium" style={{ color: colors.primary.darkBlue }}>
                 View History
               </span>
@@ -284,6 +324,70 @@ export function DashboardOverview() {
           </div>
         </div>
       </div>
+      
+      {/* Recent Files Section */}
+      {recentFiles.length > 0 && (
+        <div className="bg-white rounded-lg p-6 border" style={{ borderColor: colors.primary.lightGray }}>
+          <h2 
+            className="text-lg font-semibold mb-4"
+            style={{ color: colors.text.primary }}
+          >
+            Recent Files
+          </h2>
+          
+          <div className="space-y-3">
+            {recentFiles.map((fileItem, idx) => (
+              <div key={idx} className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                <div className="w-8 h-8 bg-blue-100 rounded flex items-center justify-center">
+                  <FileText size={16} color={colors.primary.blue} />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="font-medium truncate" style={{ color: colors.text.primary }}>
+                    {fileItem.file?.name || 'Unknown file'}
+                  </p>
+                  <p className="text-sm" style={{ color: colors.text.secondary }}>
+                    {fileItem.file?.size ? formatFileSize(fileItem.file.size) : 'Unknown size'} • Analyzed
+                  </p>
+                </div>
+                <div className="text-green-600">
+                  <Sparkles size={16} />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+      
+      {/* File Upload Modal */}
+      {showUpload && (
+        <FileUpload
+          onFilesUploaded={(files) => {
+            // Store files in localStorage for demo purposes
+            const existingFiles = localStorage.getItem('uploaded_files');
+            let allFiles = [];
+            
+            if (existingFiles) {
+              try {
+                allFiles = JSON.parse(existingFiles);
+              } catch (error) {
+                console.warn('Error parsing existing files:', error);
+              }
+            }
+            
+            allFiles.push(...files);
+            localStorage.setItem('uploaded_files', JSON.stringify(allFiles));
+            
+            // Refresh dashboard stats
+            fetchDashboardStats();
+            
+            setShowUpload(false);
+            
+            // Show success message
+            alert(`Successfully uploaded and analyzed ${files.length} file(s)!`);
+          }}
+          onClose={() => setShowUpload(false)}
+        />
+      )}
     </div>
   );
 }

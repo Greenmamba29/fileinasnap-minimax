@@ -8,6 +8,7 @@ import { LoginForm } from './components/Login';
 import { TopBar } from './components/TopBar';
 import { Sidebar } from './components/Sidebar';
 import { DashboardOverview } from './components/DashboardOverview';
+import { FileBrowser } from './components/FileBrowser';
 import { MediaInsights } from './components/MediaInsights';
 import { FileHistory } from './components/FileHistory';
 import { ActivityFeed } from './components/ActivityFeed';
@@ -77,6 +78,8 @@ function AppContent() {
     switch (activeSection) {
       case 'dashboard':
         return <DashboardOverview />;
+      case 'files':
+        return <FileBrowser />;
       case 'insights':
         return <MediaInsights />;
       case 'history':
