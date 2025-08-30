@@ -1,0 +1,20 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {Role = [""], Country = [""]}
+
+# Environment variables placeholder - set these in Netlify dashboard:
+# OPENROUTER_API_KEY = your_openrouter_api_key
+# DATABASE_URL = your_neon_database_url
