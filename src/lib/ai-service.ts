@@ -1,48 +1,37 @@
 import { getCurrentUser } from './neon-auth';
 
-// Get the Supabase URL from environment or config
-const SUPABASE_URL = 'https://vuekwckknfjivjighhfd.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ1ZWt3Y2trIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjIwODc1NjQsImV4cCI6MjAzNzY2MzU2NH0.demo-anon-key';
+// Base URL for our application (Netlify or local)
+const BASE_URL = typeof window !== 'undefined' ? window.location.origin : 'https://fileinasnap-v1.netlify.app';
 
-// AI Service for interacting with Edge Functions
+// AI Service for interacting with Netlify Functions
 class AIService {
-  private async callEdgeFunction(functionName: string, payload: any) {
+  private async callNetlifyFunction(functionName: string, payload: any) {
     try {
       // Get current Neon user 
       const user = getCurrentUser();
-      console.log('🔗 Calling AI function:', functionName, 'for user:', user?.email || 'anonymous');
+      console.log('🔗 Calling Netlify AI function:', functionName, 'for user:', user?.email || 'anonymous');
       
-      // For demo purposes, we'll simulate AI functionality since we don't have active Supabase functions
-      if (functionName === 'ai-provider-status') {
-        return this.getMockProviderStatus();
-      }
+      const endpoint = `${BASE_URL}/.netlify/functions/${functionName}`;
       
-      // Try to call the actual Supabase function with fallback
-      try {
-        const response = await fetch(`${SUPABASE_URL}/functions/v1/${functionName}`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-            'apikey': SUPABASE_ANON_KEY,
-          },
-          body: JSON.stringify(payload)
-        });
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload)
+      });
 
-        if (response.ok) {
-          const result = await response.json();
-          return result.data || result;
-        } else {
-          console.warn(`AI function ${functionName} returned ${response.status}, using fallback`);
-          return this.getFallbackResponse(functionName, payload);
-        }
-      } catch (fetchError) {
-        console.warn(`AI function ${functionName} failed, using fallback:`, fetchError);
+      if (response.ok) {
+        const result = await response.json();
+        console.log('✅ Netlify function call successful:', functionName);
+        return result.data || result;
+      } else {
+        console.warn(`Netlify function ${functionName} returned ${response.status}, using fallback`);
         return this.getFallbackResponse(functionName, payload);
       }
     } catch (error) {
-      console.error(`Error calling ${functionName}:`, error);
-      throw error;
+      console.warn(`Netlify function ${functionName} failed, using fallback:`, error);
+      return this.getFallbackResponse(functionName, payload);
     }
   }
 
@@ -198,7 +187,7 @@ class AIService {
 
   // Document Analysis
   async analyzeDocument(fileContent: string, fileName: string, filePath?: string, analysisType: string = 'comprehensive') {
-    return this.callEdgeFunction('ai-analyze-document', {
+    return this.callNetlifyFunction('ai-analyze-document', {
       fileContent,
       fileName,
       filePath,
@@ -214,7 +203,7 @@ class AIService {
     size?: number;
     content?: string;
   }>, customCategories?: string[]) {
-    return this.callEdgeFunction('ai-categorize-files', {
+    return this.callNetlifyFunction('ai-categorize-files', {
       files,
       customCategories
     });
@@ -222,7 +211,7 @@ class AIService {
 
   // Tag Generation
   async generateTags(fileName: string, filePath?: string, mimeType?: string, content?: string, metadata?: any, maxTags: number = 10, tagCategories?: string[]) {
-    return this.callEdgeFunction('ai-generate-tags', {
+    return this.callNetlifyFunction('ai-generate-tags', {
       fileName,
       filePath,
       mimeType,
@@ -235,7 +224,7 @@ class AIService {
 
   // Image Analysis
   async analyzeImage(imageBase64: string, fileName: string, filePath?: string, analysisType: string = 'comprehensive') {
-    return this.callEdgeFunction('ai-analyze-image', {
+    return this.callNetlifyFunction('ai-analyze-image', {
       imageBase64,
       fileName,
       filePath,
@@ -252,7 +241,7 @@ class AIService {
     mimeType?: string;
     hash?: string;
   }>, similarityThreshold: number = 0.9, includeSimilar: boolean = true) {
-    return this.callEdgeFunction('ai-detect-duplicates', {
+    return this.callNetlifyFunction('ai-detect-duplicates', {
       files,
       similarityThreshold,
       includeSimilar
@@ -261,7 +250,7 @@ class AIService {
 
   // Content Summary
   async generateSummary(fileName: string, filePath?: string, content?: string, mimeType?: string, metadata?: any, summaryLength: string = 'medium') {
-    return this.callEdgeFunction('ai-generate-summary', {
+    return this.callNetlifyFunction('ai-generate-summary', {
       fileName,
       filePath,
       content,
@@ -281,7 +270,7 @@ class AIService {
     tags?: string[];
     category?: string;
   }>, currentStructure?: string, organizationGoals?: string) {
-    return this.callEdgeFunction('ai-suggest-organization', {
+    return this.callNetlifyFunction('ai-suggest-organization', {
       files,
       currentStructure,
       organizationGoals
@@ -290,7 +279,7 @@ class AIService {
 
   // Provider Status Check
   async checkProviderStatus() {
-    return this.callEdgeFunction('ai-provider-status', {});
+    return this.callNetlifyFunction('ai-provider-status', {});
   }
 
   // Utility function to convert file to base64
