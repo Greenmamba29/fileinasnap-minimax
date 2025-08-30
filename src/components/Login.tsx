@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { signIn, signOut } from '../lib/supabase';
+import { authenticateUser } from '../lib/neon-auth';
 import { colors } from '../lib/design-system';
 import { LogIn, Mail, Lock, Eye, EyeOff } from 'lucide-react';
 
@@ -20,14 +20,18 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
     setError(null);
 
     try {
-      const { error } = await signIn(email, password);
+      console.log('🔐 Attempting login with Neon auth for:', email);
+      const { data, error } = await authenticateUser(email, password);
       
-      if (error) {
-        setError(error.message);
+      if (error || !data) {
+        setError(error?.message || 'Authentication failed');
+        console.log('❌ Login failed:', error?.message);
       } else {
+        console.log('✅ Login successful for:', data.user.email);
         onSuccess?.();
       }
     } catch (err) {
+      console.error('Login error:', err);
       setError('An unexpected error occurred. Please try again.');
     }
     
@@ -36,8 +40,8 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
 
   // Pre-fill with test account credentials for demo
   const handleTestAccount = () => {
-    setEmail('admin@fileinasnap.test');
-    setPassword('FileInASnap2024!Admin');
+    setEmail('admin@fileinasnap.com');
+    setPassword('admin123!');
   };
 
   return (
@@ -196,8 +200,9 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
             Use Test Account
           </button>
           <div className="text-xs mt-2 space-y-1" style={{ color: colors.text.muted }}>
-            <div>Email: admin@fileinasnap.test</div>
-            <div>Password: FileInASnap2024!Admin</div>
+            <div>Email: admin@fileinasnap.com</div>
+            <div>Password: admin123!</div>
+            <div className="mt-1">Other accounts: testuser@fileinasnap.com (test123!), demo@fileinasnap.com (demo123!)</div>
           </div>
         </div>
 

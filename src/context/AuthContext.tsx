@@ -1,6 +1,15 @@
 import React, { createContext } from 'react';
-import { User } from '@supabase/supabase-js';
 import { useAuth } from '../hooks/useAuth';
+
+// Compatible user interface
+interface User {
+  id: string;
+  email: string;
+  user_metadata?: {
+    full_name?: string;
+    role?: string;
+  };
+}
 
 interface AuthContextType {
   user: User | null;

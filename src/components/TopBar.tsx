@@ -1,7 +1,16 @@
 import { useState } from 'react';
-import { User } from '@supabase/supabase-js';
-import { signOut } from '../lib/supabase';
+import { signOut } from '../lib/neon-auth';
 import { useTranslate } from '../hooks/useI18nContext';
+
+// Compatible user interface
+interface User {
+  id: string;
+  email: string;
+  user_metadata?: {
+    full_name?: string;
+    role?: string;
+  };
+}
 import { Menu, X, Search, Bell, Settings, LogOut } from 'lucide-react';
 import { colors } from '../lib/design-system';
 import { LanguageSelector } from './LanguageSelector';

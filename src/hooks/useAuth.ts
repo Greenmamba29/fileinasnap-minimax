@@ -1,48 +1,40 @@
 import { useState, useEffect } from 'react';
-import { User } from '@supabase/supabase-js';
-import { supabase, getCurrentUser } from '../lib/supabase';
+import { useNeonAuth, getCurrentUser } from '../lib/neon-auth';
+
+// Compatibility interface to match Supabase User type
+interface UserCompat {
+  id: string;
+  email: string;
+  user_metadata?: {
+    full_name?: string;
+    role?: string;
+  };
+}
 
 export function useAuth() {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<UserCompat | null>(null);
   const [loading, setLoading] = useState(true);
+  const { user: neonUser, loading: neonLoading } = useNeonAuth();
 
   useEffect(() => {
-    // Get initial user (includes demo users)
-    async function getInitialUser() {
-      const currentUser = await getCurrentUser();
-      setUser(currentUser as User);
+    if (!neonLoading) {
+      if (neonUser) {
+        // Convert Neon user to Supabase-compatible format
+        const compatUser: UserCompat = {
+          id: neonUser.id,
+          email: neonUser.email,
+          user_metadata: {
+            full_name: neonUser.full_name,
+            role: neonUser.role
+          }
+        };
+        setUser(compatUser);
+      } else {
+        setUser(null);
+      }
       setLoading(false);
     }
-
-    getInitialUser();
-
-    // Listen for auth changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (_event, session) => {
-        if (session?.user) {
-          setUser(session.user);
-        } else {
-          // Check for demo user when no session
-          const demoUser = await getCurrentUser();
-          setUser(demoUser as User);
-        }
-        setLoading(false);
-      }
-    );
-
-    // Also listen for demo user changes
-    const handleStorageChange = async () => {
-      const currentUser = await getCurrentUser();
-      setUser(currentUser as User);
-    };
-
-    window.addEventListener('storage', handleStorageChange);
-
-    return () => {
-      subscription.unsubscribe();
-      window.removeEventListener('storage', handleStorageChange);
-    };
-  }, []);
+  }, [neonUser, neonLoading]);
 
   return { user, loading };
 }
